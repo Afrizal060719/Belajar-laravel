@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProdukController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -23,4 +24,8 @@ Route::get('/about/{id}', function($id) {
 
 Route::view('/contact', 'pages.contact');
 
-Route::view('/product', 'pages.product');
+Route::get('/product', [ProdukController::class,'index']);
+
+Route::get('/product/create', [ProdukController::class,'create']); //menampilkan halaman form dat
+
+Route::post('/product',[ProdukController::class, 'store']); //untuk mengelola data yg telah dikirim dari halaman form data
