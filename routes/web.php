@@ -8,9 +8,9 @@ Route::get('/', function () {
 
 Route::get('/about', function(){
     return view('pages.about',[
-        'nama'=>'kenza erend',
-        'umur'=>21,
-        'alamat' =>'jateim',
+        'nama'=>'Afrizal Dani',
+        'umur'=>18,
+        'alamat' =>'jatim',
 
     ]);
 });
